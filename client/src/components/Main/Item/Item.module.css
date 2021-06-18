@@ -1,0 +1,10 @@
+.item {
+  height: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  font-family: fantasy;
+  border: 1px solid grey;
+  margin-top: 5px;
+  position: relative;
+};
