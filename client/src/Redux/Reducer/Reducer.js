@@ -27,6 +27,13 @@ const rootReducer = (state, action) => {
         currentSum: state.currentSum -= Number(action.payload.price)
       }
 
+      case 'SEND_BASKET':
+        return {
+          ...state,
+          currentBasket: [],
+          currentSum: 0
+        }
+
     case 'CHANGE_DELIVERY':
       return {
         ...state,

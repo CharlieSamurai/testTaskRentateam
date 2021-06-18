@@ -144,6 +144,12 @@ app.route('/getcurrentcategory/:category')
     res.json(pseudoDB[(pseudoDB.findIndex(el => el.category === req.params.category))]);
   });
 
+app.route('/sendbasket')
+.post((req, res) => {
+  console.log(req.body);
+  res.sendStatus(200);
+});
+
 app.listen(port, () => {
   console.log(`Server: OK, port: ${port}`);
 });
