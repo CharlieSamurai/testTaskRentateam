@@ -5,16 +5,24 @@ const sendBasket = () => {
 };
 
 const sendBasketThunk = (basket) => async (dispatch) => {
-  const response = await fetch('http://localhost:3001/sendbasket', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ basketList: basket })
-  });
-  if (response.status === 200) {
-    dispatch(sendBasket());
+  try {
+    const response = await fetch('http://localhost:3001/sendbasket', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ basketList: basket })
+    });
+    if (response.status === 200) {
+      dispatch(sendBasket());
+    }
   }
+  catch (e) {
+    console.log(e)
+  }
+  finally {
+    console.log('make a loader');
+  };
 };
 
 export default sendBasketThunk;
