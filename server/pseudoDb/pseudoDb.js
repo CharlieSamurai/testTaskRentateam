@@ -1,4 +1,4 @@
-const pseudoDB = [
+const pseudoDb = [
   {
     category: 'Бургеры',
     itemList: [
@@ -123,4 +123,4 @@ const pseudoDB = [
   { category: 'Хиты по 50' }
 ];
 
-module.exports = pseudoDB;
+module.exports = pseudoDb;

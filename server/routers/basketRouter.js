@@ -9,7 +9,7 @@ router.route('/sendbasket')
       res.sendStatus(200);
     }
     catch (err) {
-      fs.appendFileSync('./public/errors/errorsLog.txt', String(err));
+      fs.appendFileSync('./public/errors/errorsLog.txt', String(err) + '\n');
       res.sendStatus(500);
     };
   });

@@ -10,7 +10,7 @@ router.route('/getallcategories')
       res.json(allCategories);
     }
     catch (err) {
-      fs.appendFileSync('./public/errors/errorsLog.txt', String(err));
+      fs.appendFileSync('./public/errors/errorsLog.txt', String(err) + '\n');
       res.sendStatus(500);
     };
   });
@@ -21,7 +21,7 @@ router.route('/getcurrentcategory/:category')
       res.json(pseudoDb[(pseudoDb.findIndex(el => el.category === req.params.category))]);
     }
     catch (err) {
-      fs.appendFileSync('./public/errors/errorsLog.txt', String(err));
+      fs.appendFileSync('./public/errors/errorsLog.txt', String(err) + '\n');
       res.sendStatus(500);
     };
   });
