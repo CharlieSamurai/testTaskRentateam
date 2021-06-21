@@ -1,4 +1,11 @@
+.current {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+}
+
 .basket {
+  background-image: url('../../../images/basket.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 80px;
@@ -7,4 +14,8 @@
   right: 10px;
   color: white;
   text-align: justify;
+}
+
+.basketShell {
+  height: 88px;
 }

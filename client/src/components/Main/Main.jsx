@@ -1,5 +1,6 @@
 import Item from './Item/Item';
 import { useSelector } from "react-redux";
+import styles from './Main.module.css';
 
 const Main = () => {
 
@@ -7,7 +8,7 @@ const Main = () => {
   const delivery = useSelector(state => state.delivery);
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'space-evenly' }}>
+    <div className={styles.divMain}>
       {
         delivery
           ?

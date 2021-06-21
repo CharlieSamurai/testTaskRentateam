@@ -13,10 +13,10 @@ const Basket = () => {
   };
 
   return (
-    <div style={{ height: '88px' }} onClick={sendBasketHandler}>
+    <div className={styles.basketShell} onClick={sendBasketHandler}>
       <img src="./images/red-squares.png" alt="" />
-      <div className={styles.basket} style={{ backgroundImage: 'url(./images/basket.png)' }}>
-        <div style={{position: 'absolute', top: '6px', left: '5px'}}>{`${currentSum}р`}</div>
+      <div className={styles.basket}>
+        <div className={styles.current}>{`${currentSum}р`}</div>
       </div>
     </div>
   );

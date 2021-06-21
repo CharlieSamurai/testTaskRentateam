@@ -1,3 +1,27 @@
+.countitemsLeft {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.countitemsRight {
+  width: 30px;
+  margin-left: 5px;
+}
+
+.counterShell {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100px
+}
+
+.addItem {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 40px;
+}
+
 .img {
   width: 350px;
   height: 280px;

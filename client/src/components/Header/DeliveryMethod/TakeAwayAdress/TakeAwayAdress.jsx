@@ -1,11 +1,13 @@
 import { useState } from "react";
+import styles from '../DeliveryMethod.module.css';
+
 
 const TakeAwayAdress = () => {
 
   const [selectAdress, setSelectAdress] = useState(null);
 
   return (
-    <div style={{width: '100%', height: '200px', marginLeft: '100px'}}>
+    <div className={styles.divDelivery}>
       <h1>Самовывоз</h1><br/>
       <select onChange={(e) => setSelectAdress(e.target.value)}>
         <option>Какой-нибудь адрес</option>

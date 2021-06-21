@@ -7,6 +7,7 @@ const getCurrentCategory = (categoryObj) => {
 
 const getCurrentCategoryThunk = (categoryName) => async (dispatch) => {
   try {
+    console.log('Тут лоадер должен выключаться!');
     const response = await fetch(`http://localhost:3001/category/getcurrentcategory/${categoryName}`);
     if (response.status === 200) {
       dispatch(getCurrentCategory(await response.json()));
@@ -16,7 +17,7 @@ const getCurrentCategoryThunk = (categoryName) => async (dispatch) => {
     console.log(e);
   }
   finally {
-    console.log('make a loader');
+    console.log('Тут лоадер должен выключаться!');
   };
 };
 

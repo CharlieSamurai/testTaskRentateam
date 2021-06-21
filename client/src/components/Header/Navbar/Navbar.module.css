@@ -1,0 +1,13 @@
+.navbarCurrentItem {
+  width: 100px;
+  height: 32px;
+  color: black;
+  font-family: cursive;
+}
+
+.navbarItem {
+  width: 100px;
+  height: 32px;
+  color: #9D9D9D;
+  font-family: cursive;
+}

@@ -9,16 +9,16 @@ const DeliveryMethod = () => {
   const method = useSelector(state => state.delivery);
 
   return (
-    <div style={{ display: 'flex', width: '100%' }}>
+    <div className={styles.chosenMethod}>
       {method
         ?
         <DeliveryAdress />
         :
         <TakeAwayAdress />
       }
-      <div style={{ display: 'flex', width: '50%', alignItems: 'center' }}>
-        <div className={method ? styles.choosen : styles.unchoosen} onClick={() => dispatch({type: 'CHANGE_DELIVERY'})}><p>Доставка</p></div>
-        <div className={method === false ? styles.choosen : styles.unchoosen} onClick={() => dispatch({type: 'CHANGE_DELIVERY'})}><p>Самовывоз</p></div>
+      <div className={styles.chooseShell}>
+        <div className={method ? styles.chosen : styles.unchosen} onClick={() => dispatch({type: 'CHANGE_DELIVERY'})}><p>Доставка</p></div>
+        <div className={method === false ? styles.chosen : styles.unchosen} onClick={() => dispatch({type: 'CHANGE_DELIVERY'})}><p>Самовывоз</p></div>
       </div>
     </div>
   );

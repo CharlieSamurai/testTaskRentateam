@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from '../DeliveryMethod.module.css';
 
 const DeliveryAdress = () => {
 
@@ -6,7 +7,7 @@ const DeliveryAdress = () => {
   const [homeNumberInput, setHomeNumberInput] = useState('');
 
   return (
-    <div style={{width: '100%', height: '200px', marginLeft: '100px'}}>
+    <div className={styles.divDelivery}>
     <h1>Доставка г. Москва</h1><br/>
     <input placeholder='Введите улицу' value={streetInput} onChange={(e) => {setStreetInput(e.target.value)}} /><br/>
     <input placeholder='Введите номер дома' value={homeNumberInput} onChange={(e) => {setHomeNumberInput(e.target.value)}} />

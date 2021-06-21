@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import getCurrentCategoryThunk from '../../../Redux/ReduxThunks/getCurrentCategory';
+import styles from './Navbar.module.css'
 
 const Navbar = ({ category }) => {
 
@@ -7,13 +8,9 @@ const Navbar = ({ category }) => {
   const currentCategory = useSelector(state => state.currentCategory);
 
   return (
-    <div style={{
-      width: '100px',
-      height: '32px',
-      color: (currentCategory === category ? 'black' : '#9D9D9D'),
-      fontFamily: 'cursive'
-    }}
-    onClick={() => dispatch(getCurrentCategoryThunk(category))}
+    <div
+      className={category === currentCategory ? styles.navbarCurrentItem : styles.navbarItem}
+      onClick={() => dispatch(getCurrentCategoryThunk(category))}
     > {category}</div >
   );
 };

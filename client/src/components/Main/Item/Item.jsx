@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './Item.module.css';
 
-const Item = ({props}) => {
+const Item = ({ props }) => {
 
   const dispatch = useDispatch();
   const currentBasket = useSelector(state => state.currentBasket);
@@ -35,20 +35,22 @@ const Item = ({props}) => {
   };
 
   return (
-  <div className={styles.item}>
-    <img src={props.img} alt="" className={styles.img} />
-    <p>{props.name}</p>
-    <p>Цена: {props.price}р</p>
-    {
-      count
-      ?
-      <div style={{position: 'absolute', bottom: '0px', right: '0px', width: '100px'}}>
-      <button style={{width: '30px', marginRight: '5px'}} onClick={removeHandler}>-</button>{currentCount}<button style={{width: '30px', marginLeft: '5px'}} onClick={addHandler}>+</button>
-      </div>
-      :
-      <button style={{position: 'absolute', bottom: '0px', right: '0px', width: '40px'}} onClick={addHandler} >Add</button>
-    }
-  </div>
+    <div className={styles.item}>
+      <img src={props.img} alt="" className={styles.img} />
+      <p>{props.name}</p>
+      <p>Цена: {props.price}р</p>
+      {
+        count
+          ?
+          <div className={styles.counterShell}>
+            <button className={styles.countitemsLeft} onClick={removeHandler}>-</button>
+            {currentCount}
+            <button className={styles.countitemsRight} onClick={addHandler}>+</button>
+          </div>
+          :
+          <button className={styles.addItem} onClick={addHandler} >Add</button>
+      }
+    </div>
   );
 };
 
