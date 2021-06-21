@@ -6,7 +6,7 @@ const sendBasket = () => {
 
 const sendBasketThunk = (basket) => async (dispatch) => {
   try {
-    const response = await fetch('http://localhost:3001/sendbasket', {
+    const response = await fetch('http://localhost:3001/basket/sendbasket', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -4,8 +4,6 @@ import styles from './Item.module.css';
 
 const Item = ({props}) => {
 
-  console.log(props)
-
   const dispatch = useDispatch();
   const currentBasket = useSelector(state => state.currentBasket);
   let currentCount = (currentBasket.filter(el => el.name === props.name).length);
@@ -38,7 +36,7 @@ const Item = ({props}) => {
 
   return (
   <div className={styles.item}>
-    <img src={props.img} alt="" style={{ width: '350px', height: '280px' }} />
+    <img src={props.img} alt="" className={styles.img} />
     <p>{props.name}</p>
     <p>Цена: {props.price}р</p>
     {
