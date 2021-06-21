@@ -7,7 +7,7 @@ const getAllCategories = (categoriesArr) => {
 
 const getAllCategoriesThunk = () => async (dispatch) => {
   try {
-    console.log('Тут лоадер должен выключаться!');
+    console.log('Тут лоадер должен включаться!');
     const response = await fetch('http://localhost:3001/category/getallcategories');
     if (response.status === 200) {
       dispatch(getAllCategories(await response.json()));

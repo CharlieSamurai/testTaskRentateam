@@ -6,7 +6,7 @@ const sendBasket = () => {
 
 const sendBasketThunk = (basket) => async (dispatch) => {
   try {
-    console.log('Тут лоадер должен выключаться!');
+    console.log('Тут лоадер должен включаться!');
     const response = await fetch('http://localhost:3001/basket/sendbasket', {
       method: 'POST',
       headers: {
